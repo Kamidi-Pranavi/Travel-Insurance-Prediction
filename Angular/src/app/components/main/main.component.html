@@ -1,0 +1,84 @@
+<form ngNativeValidate #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)" class="border p-3 rounded-3 mt-3 mb-3">
+        <div class="row g-0">
+            <div class="col text-center p-2 mb-3 bg-light">
+                <span class="fs-3">Details</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="Age" class="form-label">Age(Enter age between 25 to 35)</label>
+                <input type="number" class="form-control" name="Age" [(ngModel)]="Age" required>
+            </div>
+        </div>
+        <div class="row">
+            <label>Employment Type</label>
+            <div class="col mb-3">
+            <select [(ngModel)]="EmploymentType" name="EmploymentType" required>
+                <option selected></option>
+                <option *ngFor="let option of list" [value]="option.id">{{option.label}}</option>
+            </select>
+        </div>
+        </div>
+        <div class="row">
+            <label>Graduate</label>
+            <div class="col mb-3">
+            <select [(ngModel)]="GraduateOrNot" name="GraduateOrNot" required>
+                <option selected></option>
+                <option *ngFor="let option of list2"[value]="option.id">{{option.label}}</option>
+            </select>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="income" class="form-label">Annual Income</label>
+                <input type="number" class="form-control" name="AnnualIncome" [(ngModel)]="AnnualIncome" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="family" class="form-label">Family Members</label>
+                <input type="number" class="form-control" name="FamilyMembers" [(ngModel)]="FamilyMembers" required>
+            </div>
+        </div>
+        <div class="row">
+            <label>Chronic Diseases</label>
+            <div class="col mb-3">
+            <select [(ngModel)]="ChronicDiseases" name="ChronicDiseases" required>
+                <option selected></option>
+                <option *ngFor="let option of list2" [value]="option.id">{{option.label}}</option>
+            </select>
+        </div>
+        </div>
+        <div class="row">
+            <label>Frequent Flyer</label>
+            <div class="col mb-3">
+            <select [(ngModel)]="FrequentFlyer" name="FrequentFlyer" required>
+                <option selected></option>
+                <option *ngFor="let option of list2" [value]="option.id">{{option.label}}</option>
+            </select>
+        </div>
+        </div>
+        <div class="row">
+            <label>Ever Travelled Abroad</label>
+            <div class="col mb-3">
+            <select  [(ngModel)]="EverTravelledAbroad" name="EverTravelledAbroad" required>
+                <option selected></option>
+                <option *ngFor="let option of list2" [value]="option.id">{{option.label}}</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Suggest</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div>
+            The verdict: <span class="text-danger">{{message}}</span>
+        </div>
+    </form>
+    

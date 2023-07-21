@@ -1,0 +1,33 @@
+.banner
+{
+    background-image: url('../../../assets/images/banner.jpg');
+    height: 536.5px;
+    background-position: center;
+    background-size: cover;
+}
+.content
+{
+    top: 15%;
+    left: 32%;
+    position: absolute;
+}
+.content h1
+{
+    color: #3c1361;
+    font-size: 60px;
+    font-weight: bold;
+}
+.content button
+{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: #fff;
+    top: 150%;
+    left: 38%;
+    position: absolute;
+}
+.content button:hover
+{
+    background-color: var(--primary-color);
+}
